@@ -1,0 +1,26 @@
+# --- Build Artifacts ---
+compiler.out
+*.o
+
+# --- Bison / Yacc Generated Files ---
+# These are generated from syntax_analyzer.y
+y.tab.c
+y.tab.h
+y.output
+
+# --- Flex / Lex Generated Files ---
+# This is generated from lex_analyzer.l
+lex.yy.c
+
+# --- Compiler Output / Logs ---
+# These change every time you run a test
+my_log.txt
+tac.txt
+assembly.txt
+
+# --- IDE and System Files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
