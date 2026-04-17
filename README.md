@@ -29,6 +29,7 @@ Line no 2 : Token <INT> Lexeme int found
 t1 = 5 + 3
 t2 = t1 * 2
 result = t2
+...
 ```
  
 ### assembly.txt (Assembly Output)
@@ -40,6 +41,7 @@ MOV result, R0
 MOV R0, 1.0
 MOV x, R0
 MOV R0, 2.5
+...
 ```
 
 ## 📂 Project Structure
