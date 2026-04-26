@@ -1,12 +1,16 @@
 # C++ Compiler (From Scratch)
 
-A simple compiler built from scratch, featuring core compilation phases including **lexical analysis**, **parsing**, and **basic code generation**. This project uses **Flex** and **Bison**.
+A simple compiler built from scratch, featuring core compilation phases including **lexical analysis**, **parsing**, and **basic code generation**. 
+This project supports both **Flex** & **Bison** and **ANTLR4** for parsing and syntax analysis.
 
+##  Parse Tree Example
+
+![Parse Tree](images/antlr4_parse_tree.png)
 
 ## 📌 Features
 
 - Lexical Analysis using Flex  
-- Syntax Parsing using Bison  
+- Syntax Parsing using Bison and ANTLR4
 - Three Address Code (TAC) Generation  
 - Basic Assembly Code Generation  
 - Output logs saved to files  
@@ -54,7 +58,8 @@ project-root/
 ├── Makefile                 # Build automation file
 ├── lex_analyzer.l           # Flex file(s) - Lexical analyzer specifications
 ├── syntax_analyzer.y        # Bison file(s) - Parser grammar specifications
-└── symbol_info.h            # Supporting C++ source/header files
+├── symbol_info.h            # Supporting C++ source/header files
+└── CPP.g4                   # ANTLR4 grammar
 ```
 
 ## 🛠️ Technologies Used
@@ -62,6 +67,7 @@ project-root/
 * C++
 * Flex
 * Bison
+* ANTLR4
 * Makefile
 ## Building the Project
  
@@ -76,7 +82,7 @@ make clean
 ```
 ## Component Details
  
-### Lexical Analyzer (`*.l`)
+### Lexical Analyzer (`*.l - Flex`)
 - **Tool:** Flex (Fast Lexical Analyzer Generator)
 - **Output:** `my_log.txt`
 - **Responsibility:** 
@@ -84,7 +90,7 @@ make clean
   - Recognizes keywords, identifiers, operators, literals
   - Tracks line and column numbers
   - Filters whitespace and comments (typically)
-### Parser (`*.y`)
+### Parser (`*.y - Bison`)
 - **Tool:** Bison (YACC-compatible parser generator)
 - **Input:** Token stream from lexer
 - **Responsibility:**
@@ -92,6 +98,14 @@ make clean
   - Builds parse tree or AST
   - Detects syntax errors
   - Interfaces with semantic analysis
+### Parser (`*.g4 - ANTLR4`)
+- **Tool:** ANTLR4
+- **Input:** Source code or token stream
+- **Responsibilities:**
+  - Grammar-based parsing (LL)
+  - Generates Lexer + Parser automatically
+  - Supports Visitor/Listener pattern
+  - Cleaner separation of syntax and semantics
 ### Three Address Code Generator
 - **Output:** `tac.txt`
 - **Purpose:** Intermediate representation
@@ -112,6 +126,6 @@ make clean
 ## 📄 Notes
  
 * Input must be provided in `input.txt`
-* Ensure Flex and Bison are installed before running
+* Ensure Flex, Bison & ANTLR4 are installed before running.
 
 **Last Updated:** April 26, 2026

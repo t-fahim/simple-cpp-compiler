@@ -12,6 +12,26 @@ y.output
 # This is generated from lex_analyzer.l
 lex.yy.c
 
+# --- ANTLR4 Generated Files ---
+# Generated from .g4 grammar
+*.interp
+*.tokens
+
+# Java target
+*Lexer.java
+*Parser.java
+*Listener.java
+*BaseListener.java
+*Visitor.java
+*BaseVisitor.java
+
+# C++ target
+*.cpp
+*.h
+
+# (Optional: if you keep your own source in separate folder,
+# better restrict like: /generated/* )
+
 # --- Compiler Output / Logs ---
 # These change every time you run a test
 my_log.txt
