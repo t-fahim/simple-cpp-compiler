@@ -166,7 +166,6 @@ integers {digit}+
 }
 
 {integers} {
-    // FIX: Your previous code used CONST_ID, but your Bison rules use CONST_INT
     symbol_info *s = new symbol_info((string)yytext,"CONST_INT");
     yylval = (YYSTYPE)s;
     loglist = "Line no " + to_string(lines)+ " : Token <CONST_INT> Lexeme " + yytext + " found\n";
@@ -174,7 +173,7 @@ integers {digit}+
     return CONST_INT;
 }
 
-"--" {
+"++" {
     symbol_info *s = new symbol_info((string)yytext, "INCOP"); 
     yylval = (YYSTYPE)s;
     loglist = "Line no " + to_string(lines) + " : Token <INCOP> Lexeme " + yytext + " found\n";
@@ -182,7 +181,7 @@ integers {digit}+
     return INCOP;
 }
 
-"++" {
+"--" {
     symbol_info *s = new symbol_info((string)yytext, "DECOP"); 
     yylval = (YYSTYPE)s;
     loglist = "Line no " + to_string(lines) + " : Token <DECOP> Lexeme " + yytext + " found\n";

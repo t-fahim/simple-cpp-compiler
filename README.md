@@ -104,11 +104,14 @@ make clean
 - **Output:** `assembly.txt`
 - **Purpose:** Target machine code (pseudo-assembly or real ISA)
 - **Typical Outputs:**
-  - intel 8086 assemly language
+  - 8086 assemly language
+
+## Project repo
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/t-fahim/simple-cpp-compiler)
 
 ## 📄 Notes
  
 * Input must be provided in `input.txt`
 * Ensure Flex and Bison are installed before running
 
-**Last Updated:** April 18, 2026
+**Last Updated:** April 26, 2026

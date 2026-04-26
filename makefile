@@ -11,5 +11,5 @@ all:
 
 clean:
 	# Added my_log.txt, tac.txt, and assembly.txt to the cleanup list
-	rm -f *.o y.tab.c y.tab.h lex.yy.c compiler.out my_log.txt tac.txt assembly.txt
+	rm -f *.o y.tab.c y.tab.h lex.yy.c compiler.out
 
