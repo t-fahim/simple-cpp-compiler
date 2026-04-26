@@ -5,7 +5,7 @@ This project supports both **Flex** & **Bison** and **ANTLR4** for parsing and s
 
 ##  Parse Tree Example
 
-![Parse Tree](images/antlr4_parse_tree.png)
+![Parse Tree](images/parse_tree.png)
 
 ## 📌 Features
 
